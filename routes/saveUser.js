@@ -26,8 +26,7 @@ router.post("/saveUser", verifyToken, async (req, res) => {
       userName: userName || "",
       email,
       createdAt: new Date().toISOString().split("T")[0],
-      avatar:
-        "https://res.cloudinary.com/diwtb2b9i/image/upload/v1737088355/default-avatar-icon-of-social-media-user-vector_umub9i.jpg",
+      avatar: "",
       historyRecipes: [],
 
       savedRecipes: [],
