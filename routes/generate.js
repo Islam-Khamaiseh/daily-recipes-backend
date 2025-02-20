@@ -57,8 +57,7 @@ router.post("/generate", optionalVerifyToken, async (req, res) => {
       nutritionalSummary_ar: arabic.nutritionalSummary,
 
       savedCounter: "0",
-      imageURL:
-        "https://res.cloudinary.com/diwtb2b9i/image/upload/v1737013675/dhc43dnbxvivsgybl9bs.jpg",
+      imageURL: "",
       ratings: { average: 0, count: 0 },
       commentsCounter: 0,
       owner,
