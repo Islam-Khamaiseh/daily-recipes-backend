@@ -32,6 +32,7 @@ const recipesIds = require("./routes/recipesIds");
 const topRecipes = require("./routes/topRecipes");
 const recentRecipes = require("./routes/recentRecipes");
 // const recipeRoutes = require("./routes/recipeRoutes");
+const generate = require("./routes/generate");
 const search = require("./routes/search");
 
 const app = express();
@@ -69,6 +70,7 @@ app.use("/api", recipesIds);
 app.use("/api", topRecipes);
 app.use("/api", recentRecipes);
 // app.use("/api", recipeRoutes);
+app.use("/api", generate);
 app.use("/api", search);
 
 const PORT = process.env.PORT || 5000;
