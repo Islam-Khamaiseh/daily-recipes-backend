@@ -23,9 +23,7 @@ router.get("/getComments", async (req, res) => {
     const comments = commentsSnapshot.docs.map((doc) => {
       const data = doc.data();
       return {
-        avatar:
-          data.avatar ||
-          "https://res.cloudinary.com/diwtb2b9i/image/upload/v1737088355/default-avatar-icon-of-social-media-user-vector_umub9i.jpg",
+        avatar: data.avatar,
         commentId: doc.id,
         userName: data.userName || "Anonymous",
         content:
