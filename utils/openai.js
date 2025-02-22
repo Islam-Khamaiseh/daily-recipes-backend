@@ -27,7 +27,7 @@ You are a recipe generator. Create a single recipe based on the following criter
     nutritionalFocus.length > 0 ? nutritionalFocus.join(", ") : "None"
   }
 - Cuisine/Region: ${region ? region : "None"}
-- ${additionalIngredients2}
+- You must create the recipe using only the 'Main Ingredients,' but you can also include common household staples like oil, salt, sugar, and spices to enhance the flavor.
 
     
 
@@ -89,9 +89,9 @@ Rules:
 
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4-turbo",
       messages: [{ role: "user", content: prompt }],
-      temperature: 0.3,
+      temperature: 0.4,
     });
 
     const rawText = response.choices[0].message.content.trim();
