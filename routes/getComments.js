@@ -13,7 +13,9 @@ router.get("/getComments", async (req, res) => {
     const commentsRef = db
       .collection("recipes")
       .doc(recipeId)
-      .collection("comments");
+      .collection("comments")
+      .orderBy("timestamp", "desc");
+
     const commentsSnapshot = await commentsRef.get();
 
     if (commentsSnapshot.empty) {
